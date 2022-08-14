@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet" 
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="{% static 'css/novedades.css' %}" />
+    <title>Avahs</title>
+  </head>
+  <body>
+    <div class="mini-header">
+      <p>¿Ya eres cliente? <a href=""> entra</a></p>
+    </div>
+    <header>
+      <div class="top">
+        <span class="material-symbols-outlined menu-icon">dehaze</span>
+        <h1>avahs</h1>
+        <div class="right-icons">
+          <span class="material-symbols-outlined icons">search</span>
+          <span class="material-symbols-outlined icons">person</span>
+          <span class="material-symbols-outlined icons">favorite</span>
+          <span class="material-symbols-outlined icons">local_mall</span>
+        </div>
+      </div>
+      <nav class="nav-bar">
+        <a href="">Novedades</a>
+        <a href="">Descuentos</a>
+      </nav>
+    </header>
+    <main>
+      <div class="main-header">
+        <h2>
+          novedades
+        </h2>
+        <span>No te pierdas ninguna de nuestras novedades</span>
+      </div>
+      <div class="container">
+        <div class="content">
+          <div class="content-header">
+            <span>12 artículos encontrados</span>
+            <select class="ordenar-select">
+              <option value="popularity">Ordenar por popularidad</option>
+              <option value="date">Ordenar por los últimos</option>
+              <option value="price" selected="selected">Ordenar por precio: bajo a alto</option>
+              <option value="price-desc">Ordenar por precio: alto a bajo</option>
+          </select>
+          </div>
+          <div class="content-data">
+            <div class="card">
+              <img src="{% static "images/products/lampara1.jpg.webp" %}" alt="">
+              <div class="info">
+                <p class="name">sobremesa estudio blanco</p>
+                <p class="precio">$52.000</p>
+                <p class="detalle">Agotado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+        <div class="footer-top-content">
+            <div class="line"> <div class="bar"></div> </div>
+            <div class="newsletter-invitation">
+                <span>¿Quieres estar al tanto de novedades, tendencias<br> y descuentos?</span> 
+                <a>Quiero recibirlos</a>
+            </div>
+            <div class="line"> <div class="bar"></div> </div>
+            <div class="follow-us">
+                <span>Siguenos en:</span>
+                <div class="social-icons">
+                    <a href="http://"><img src="{% static "images/icon-instagram.svg" %}"/></a>
+                    <a href="http://"><img src="{% static "images/icon-facebook.svg" %}"/></a>
+                </div>
+            </div>
+           
+            <div class="envios">
+                <div class="envios-item">
+                    <a href="http://"><img src="{% static "images/entrega-domicilio.svg" %}"/></a>
+                    <span>entrega a domicilio</span>
+                </div>
+                <div class="envios-item">
+                    <a href="http://"><img src="{% static "images/envio-gratis.svg" %}"/></a>
+                    <span>envios gratis desde $100.000</span>
+                </div>
+                <div class="envios-item">
+                    <a href="http://"><img src="{% static "images/devolucion.svg" %}"/></a>
+                    <span>devoluciones 10 días</span>
+                </div>   
+            </div>
+        </div>
+        <div class="footer-middle-content">
+            <a href="">Contacto</a>
+            <a href="">Sobre nosotros</a>
+            <a href="">Politica de Cookies</a>
+            <a href="">Aviso legal</a>
+        </div>
+        <div class="footer-bottom-content">
+            <img src="{% static "images/tarjetas.svg" %}" alt="">
+            <span>© Copyright 2022 Avahs</span>
+        </div>
+    </footer>
+  </body>
+</html>
