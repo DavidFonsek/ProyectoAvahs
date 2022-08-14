@@ -39,18 +39,21 @@ header{
 }
 
 .menu-icon{
-    margin: 0 20px;
+    margin: 0 30px;
     padding-right: 100px;
     max-width: 155px;
 }
 
-h1{
+.top a{
+    text-decoration: none;
+    color: black;
     align-self: center;
     text-transform: uppercase;
 }
 
+
 .right-icons{
-    margin: 0 20px;
+    margin: 0 30px;
     max-width: 155px;
 }
 
@@ -88,9 +91,10 @@ nav a:hover{
 main{
     margin: 0px;
     padding: 0px;
-    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 
 
 

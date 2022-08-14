@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 
-def index(request):
-    return render(request, "index.html")
+def home(request):
+    return render(request, "pages/home.html")
 
 def novedades(request):
-    return render(request, "novedades.html")
+    return render(request, "pages/novedades.html")

@@ -1,0 +1,43 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block titulo %} Novedades {% endblock%} 
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/novedades.css' %}" />
+{% endblock %} 
+
+{% block body %}
+
+  <div class="main-header">
+    <h2>novedades</h2>
+    <span>No te pierdas ninguna de nuestras novedades</span>
+  </div>
+  <div class="container">
+    <div class="content">
+      <div class="content-header">
+        <span>12 artículos encontrados</span>
+        <select class="ordenar-select">
+          <option value="popularity">Ordenar por popularidad</option>
+          <option value="date">Ordenar por los últimos</option>
+          <option value="price" selected="selected">
+            Ordenar por precio: bajo a alto
+          </option>
+          <option value="price-desc">Ordenar por precio: alto a bajo</option>
+        </select>
+      </div>
+      <div class="content-data">
+        <div class="card">
+          <img src="{% static "images/products/lampara1.jpg.webp" %}" alt="">
+          <div class="info">
+            <p class="name">sobremesa estudio blanco</p>
+            <p class="precio">$52.000</p>
+            <p class="detalle">Agotado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

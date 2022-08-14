@@ -15,8 +15,10 @@
       rel="stylesheet" 
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
-    <link rel="stylesheet" href="{% static 'css/novedades.css' %}" />
-    <title>Avahs</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    {% block styles %} {% endblock %}
+    
+    <title>{% block titulo %}  {% endblock %}</title>
   </head>
   <body>
     <div class="mini-header">
@@ -25,7 +27,8 @@
     <header>
       <div class="top">
         <span class="material-symbols-outlined menu-icon">dehaze</span>
-        <h1>avahs</h1>
+       
+        <a href="/app/home"> <h1>avahs </h1></a>
         <div class="right-icons">
           <span class="material-symbols-outlined icons">search</span>
           <span class="material-symbols-outlined icons">person</span>
@@ -34,40 +37,13 @@
         </div>
       </div>
       <nav class="nav-bar">
-        <a href="">Novedades</a>
+        <a href="/app/novedades">Novedades</a>
         <a href="">Descuentos</a>
+        <a href="">Tendencias</a>
       </nav>
     </header>
     <main>
-      <div class="main-header">
-        <h2>
-          novedades
-        </h2>
-        <span>No te pierdas ninguna de nuestras novedades</span>
-      </div>
-      <div class="container">
-        <div class="content">
-          <div class="content-header">
-            <span>12 artículos encontrados</span>
-            <select class="ordenar-select">
-              <option value="popularity">Ordenar por popularidad</option>
-              <option value="date">Ordenar por los últimos</option>
-              <option value="price" selected="selected">Ordenar por precio: bajo a alto</option>
-              <option value="price-desc">Ordenar por precio: alto a bajo</option>
-          </select>
-          </div>
-          <div class="content-data">
-            <div class="card">
-              <img src="{% static "images/products/lampara1.jpg.webp" %}" alt="">
-              <div class="info">
-                <p class="name">sobremesa estudio blanco</p>
-                <p class="precio">$52.000</p>
-                <p class="detalle">Agotado</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {% block body %}  {% endblock %}
     </main>
     <footer>
         <div class="footer-top-content">
