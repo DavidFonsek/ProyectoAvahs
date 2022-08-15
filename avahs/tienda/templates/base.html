@@ -21,13 +21,17 @@
     <title>{% block titulo %}  {% endblock %}</title>
   </head>
   <body>
-    <div class="mini-header">
-      <p>¿Ya eres cliente? <a href=""> entra</a></p>
-    </div>
     <header>
+      <div class="top-header">
+        <p>¿Ya eres cliente? <a href=""> entra</a></p>
+      </div> 
       <div class="top">
-        <span class="material-symbols-outlined menu-icon">dehaze</span>
-       
+        <div onclick="mostrar()"  class="menu-icon">
+          <div class="line-menu-icon " id="line-menu-icon"></div>
+          <div class="line-menu-icon " id="line-menu-icon-2"></div>
+        </div>
+        
+      
         <a href="/app/home"> <h1>avahs </h1></a>
         <div class="right-icons">
           <span class="material-symbols-outlined icons">search</span>
@@ -38,19 +42,52 @@
       </div>
       <nav class="nav-bar">
         <a href="/app/novedades">Novedades</a>
-        <a href="">Descuentos</a>
-        <a href="">Tendencias</a>
+        <a href="/app/descuentos">Descuentos</a>
+        <a href="/app/tendencias">Tendencias</a>
       </nav>
     </header>
+   
+    <div id="menu-lateral" class="menu-lateral"> 
+        <div class="content-menu-lateral">
+          <h3>avahs</h3>
+          <div class="sections">
+            <div class="horizontal-bar"></div>
+            <div class="link">
+              <a href="">novedades</a>
+            </div>
+            <div class="horizontal-bar"></div>
+            <div class="link">
+              <a href="">descuentos</a>
+            </div>
+            <div class="horizontal-bar"></div>
+            <div class="link">
+              <a href="">tendencias</a>
+            </div>
+            <div class="horizontal-bar"></div>
+            <div class="link">
+              <a href="">contacto</a>
+            </div>
+            <div class="horizontal-bar"></div>
+          </div>
+          <div class="follow-us">
+            <span>Siguenos en:</span>
+            <div class="social-icons">
+                <a href="http://"><img src="{% static "images/icon-instagram.svg" %}"/></a>
+                <a href="http://"><img src="{% static "images/icon-facebook.svg" %}"/></a>
+            </div>
+          </div>
+        </div>
+    </div>
     <main>
       {% block body %}  {% endblock %}
     </main>
+   
     <footer>
         <div class="footer-top-content">
             <div class="line"> <div class="bar"></div> </div>
             <div class="newsletter-invitation">
                 <span>¿Quieres estar al tanto de novedades, tendencias<br> y descuentos?</span> 
-                <a>Quiero recibirlos</a>
+                <a  href="http://">Quiero recibirlos</a>
             </div>
             <div class="line"> <div class="bar"></div> </div>
             <div class="follow-us">
@@ -87,5 +124,32 @@
             <span>© Copyright 2022 Avahs</span>
         </div>
     </footer>
+  <script>
+    var estado = false
+    function mostrar() {
+        
+      if (estado) {
+        document.getElementById("line-menu-icon").classList.remove("rotate");
+        document.getElementById("line-menu-icon").classList.add("a-rotate");
+
+        document.getElementById("line-menu-icon-2").classList.remove("rotate-2");
+        document.getElementById("line-menu-icon-2").classList.add("a-rotate-2");
+        
+
+        document.getElementById("menu-lateral").style.left = "-24vw";
+      } else {
+
+        document.getElementById("line-menu-icon").classList.remove("a-rotate");
+        document.getElementById("line-menu-icon").classList.add("rotate");
+
+        document.getElementById("line-menu-icon-2").classList.remove("a-rotate-2");
+        document.getElementById("line-menu-icon-2").classList.add("rotate-2");
+
+        document.getElementById("menu-lateral").style.left = "0";
+      }
+      estado = !estado
+    }
+    
+    </script>
   </body>
 </html>
