@@ -17,23 +17,24 @@
   <div class="container">
     <div class="content">
       <div class="image-product">
-        <img src="{% static "images/products/lampara2.jpg" %}"/>
+        <img src="{% static "images/products/lampara1.jpg.webp" %}"/>
       </div>
       <div class="product-info">
-        <h1>SOBREMESA COVELONG BLANCO</h1>
-        <span class="precio">$169.67</span>
+        <h1>LAMPARA DE PARED COLOR CUARZO</h1>
+        <span class="precio">$100.00</span>
         <span class="disponibilidad">Solo quedan 1 disponibles</span>
-        <button>Añadir al carrito</button>
-        <p class="descripcion">Con un diseño cuidado, sencillo y funcional, este sobremesa juega combinando detalles con acabado madera y un color sólido, una de las claves del estilo nórdico más puro. Perfecto para tu mesa de trabajo y también para la mesa de estudio de los adolescentes de la casa. Porque es elegante pero también tiene cierto “rollo”.</p>
+        <a href="/app/carrito" type="button"><button>Añadir al carrito</button></a>
+        
+        <p class="descripcion">Con un diseño cuidado, sencillo y funcional, esta lampara de pared juega combinando detalles con acabado de metal y un color sólido, una de las claves del estilo ingles más puro. Perfecto para tu sala y también para el cuarto de estudio de los adolescentes de la casa. Porque es elegante pero también tiene cierto “rollo”.</p>
         <ul class="detalles">
           <li>
             Mide – 17 x 51 x 61 cm
           </li>
           <li>
-            Material – acrílico
+            Material – Metal
           </li>
           <li>
-            Color – blanco y madera
+            Color – Cuarzo
           </li>
         </ul>
       </div>
@@ -43,5 +44,33 @@
     </div>
   </div>
 
+  <script>
+const Clickbutton = document.querySelectorAll('.button')
+const tbody = document.querySelector('.product-info')
+let carrito = []
+
+Clickbutton.forEach(btn => {
+  btn.addEventListener('click', addToCarritoItem)
+})
+
+
+function addToCarritoItem(e){
+  const button = e.target
+  const item = button.closest('.card')
+  const itemTitle = item.querySelector('.card-title').textContent;
+  const itemPrice = item.querySelector('.precio').textContent;
+  const itemImg = item.querySelector('.card-img-top').src;
+  
+  const newItem = {
+    title: itemTitle,
+    precio: itemPrice,
+    img: itemImg,
+    cantidad: 1
+  }
+}
+    
+  </script>
+
 
 {% endblock %}
+
