@@ -1,0 +1,47 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block titulo %} Novedades {% endblock%} 
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/elemento.css' %}" />
+{% endblock %} 
+
+{% block body %}
+
+  <div class="main-header">
+    <div class="content-header">
+      <span>Home>Novedades>Elemento</span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content">
+      <div class="image-product">
+        <img src="{% static "images/products/lampara2.jpg" %}"/>
+      </div>
+      <div class="product-info">
+        <h1>SOBREMESA COVELONG BLANCO</h1>
+        <span class="precio">$169.67</span>
+        <span class="disponibilidad">Solo quedan 1 disponibles</span>
+        <button>Añadir al carrito</button>
+        <p class="descripcion">Con un diseño cuidado, sencillo y funcional, este sobremesa juega combinando detalles con acabado madera y un color sólido, una de las claves del estilo nórdico más puro. Perfecto para tu mesa de trabajo y también para la mesa de estudio de los adolescentes de la casa. Porque es elegante pero también tiene cierto “rollo”.</p>
+        <ul class="detalles">
+          <li>
+            Mide – 17 x 51 x 61 cm
+          </li>
+          <li>
+            Material – acrílico
+          </li>
+          <li>
+            Color – blanco y madera
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="recomendaciones">
+      
+    </div>
+  </div>
+
+
+{% endblock %}
