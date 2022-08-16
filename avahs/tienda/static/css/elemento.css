@@ -1,0 +1,61 @@
+.main-header{
+    margin: 56px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.content-header{
+    width: 65%;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-product{
+    width: 50vw;
+}
+
+.image-product img{
+    width: 100%;
+}
+
+.product-info{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info .precio{
+    margin: 24px 0px;
+    font-size: 24px;
+}
+
+.product-info .disponibilidad{
+    margin: 16px 0px;
+}
+
+.product-info button{
+    width: 250px;
+    height: 50px;
+    background-color: #b04f53;
+    border-color: #3e5264;
+    margin: 30px 0px;
+    border: 1px solid rgb(206, 212, 218);
+    color: white;
+    border-radius: 10px;
+}
+
+.product-info button:hover{
+    background-color: #944246;
+}
