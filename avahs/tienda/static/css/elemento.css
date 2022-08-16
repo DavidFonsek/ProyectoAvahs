@@ -20,6 +20,7 @@
     width: 65%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 60px;
 }
 
 .image-product{
@@ -27,7 +28,8 @@
 }
 
 .image-product img{
-    width: 100%;
+    width: 60%;
+    
 }
 
 .product-info{
@@ -58,4 +60,5 @@
 
 .product-info button:hover{
     background-color: #944246;
+    padding:3px;
 }
