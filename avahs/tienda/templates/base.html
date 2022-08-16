@@ -34,7 +34,7 @@
       
         <a href="/app/home"> <h1>avahs </h1></a>
         <div class="right-icons">
-          <span class="material-symbols-outlined icons">search</span>
+          <span onclick="ocultarFind()"  class="material-symbols-outlined icons">search</span>
           <span class="material-symbols-outlined icons">person</span>
           <span class="material-symbols-outlined icons">favorite</span>
           <a href="/app/carrito"><span class="material-symbols-outlined icons">local_mall</span></a>
@@ -45,6 +45,10 @@
         <a href="/app/descuentos">Descuentos</a>
         <a href="/app/tendencias">Tendencias</a>
       </nav>
+      <div id="find" class="find">
+        <input class="campo-texto" type="text" placeholder="Buscar productos..."  name="nombredelacaja">
+        <a  href="/app/resultados">Buscar</a>
+      </div>
     </header>
    
     <div id="menu-lateral" class="menu-lateral"> 
@@ -125,6 +129,21 @@
         </div>
     </footer>
   <script>
+    var estado_find = false
+    function ocultarFind() {
+      console.log(1);
+      
+      
+      if (estado_find) {
+        document.getElementById("find").classList.remove("find-show");
+        document.getElementById("find").classList.add("find-hidden");
+      }else{
+        document.getElementById("find").classList.remove("find-hidden");
+        document.getElementById("find").classList.add("find-show");
+      }
+
+      estado_find = !estado_find
+    }
     var estado = false
     function mostrar() {
         
@@ -138,7 +157,9 @@
 
         document.getElementById("menu-lateral").style.left = "-24vw";
       } else {
-
+        if (estado_find){
+          ocultarFind();
+        }
         document.getElementById("line-menu-icon").classList.remove("a-rotate");
         document.getElementById("line-menu-icon").classList.add("rotate");
 
