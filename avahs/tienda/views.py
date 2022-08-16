@@ -15,3 +15,6 @@ def tendencias(request):
 
 def elemento(request):
     return render(request, "pages/elemento.html")
+
+def carrito(request):
+    return render(request, "pages/carrito.html")
