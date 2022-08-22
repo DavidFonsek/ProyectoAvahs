@@ -87,3 +87,6 @@ local_settings.py
 
 .env
 db.sqlite3
+
+avahs/tienda/__pycache__/
+avahs/avahs/__pycache__/
