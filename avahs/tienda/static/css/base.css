@@ -39,14 +39,42 @@ h1{
     z-index: 10;
 }
 
+.top-header-content-1 {
+    position: fixed;
+    transition: all 1s ease;
+    top: 1%
+}
 
-.top-header p{
+.top-header-content-2 {
+    top: -50px;
+    position: fixed;
+    transition: all 1s ease;
+}
+
+.top-header-content-3 {
+    top: -50px;
+    position: fixed;
+    transition: all 1s ease;
+}
+
+.top-header-content-1 p{
+    margin: 0px;
+    font-size: 14rem;
+}
+
+.top-header-content-2 p{
+    margin: 0px;
+    font-size: 14rem;
+}
+
+.top-header-content-3 p{
     margin: 0px;
     font-size: 14rem;
 }
 
 
-.top-header a{
+
+.top-header-content-1 a{
     color: azure;
 }
 

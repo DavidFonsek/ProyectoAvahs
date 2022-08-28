@@ -1,0 +1,63 @@
+
+.container{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.content{
+    margin: 48px 0px;
+}
+
+.content-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafaf9;
+    width: 60vw;
+    height: 64px;
+   
+    
+}
+
+.content-header p{
+    font-size: 16rem;
+    margin: 0px 32px;
+}
+
+.content-header a{
+    font-size: 16rem;
+    margin: 0px 32px;
+    border: 1px solid rgb(206, 212, 218);
+    outline: none;
+    text-decoration: none;
+    color: black;
+    padding: 16px 50px;
+    border-radius: 6px;
+    background-color: #61788d;
+    text-align: center;
+}
+
+
+.content-middle{
+    margin: 64px 0px;
+}
+
+.tabla{
+    width: 100%;
+    border-spacing: 0px;
+}
+
+
+.tabla th{
+    padding: 8px 0px;
+    font-size: 16rem;
+    background-color: #f2e3da;
+}
+
+.tabla td{
+    padding: 12px 0px;
+    font-size: 16rem;
+    text-align: center;
+}

@@ -18,3 +18,13 @@ def elemento(request):
 
 def resultados(request):
     return render(request, "pages/resultados.html")
+
+def login(request):
+    return render(request, "pages/login.html")
+
+def registro(request):
+    return render(request, "pages/registro.html")
+
+def carrito(request):
+    return render(request, "pages/carrito.html")
+

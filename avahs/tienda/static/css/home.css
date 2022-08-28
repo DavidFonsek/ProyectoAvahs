@@ -10,13 +10,15 @@ section{
     margin: 100px 0px;
 }
 
+section h2{
+    font-size: 25rem;
+}
+
 .linea{
     height: 3px;
     width: 100%;
     background-color: black;
 }
-
-
 
 
 .card{

@@ -23,7 +23,15 @@
   <body>
     <header>
       <div class="top-header">
-        <p>¿Ya eres cliente? <a href=""> entra</a></p>
+        <div class="top-header-content-1" id="top-header-content-1">
+          <p>¿Ya eres cliente? <a href=""> entra</a></p>
+        </div>
+        <div class="top-header-content-2" id="top-header-content-2">
+          <p>Envíos gratis desde $100.000</p>
+        </div>
+        <div class="top-header-content-3" id="top-header-content-3">
+          <p>Entregas a domicilios</p>
+        </div>
       </div> 
       <div class="top-2">
           <a href="/app/home"> <h1>avahs </h1></a>
@@ -130,93 +138,6 @@
             <span>© Copyright 2022 Avahs</span>
         </div>
     </footer>
-  <script>
-
-
-    window.addEventListener('resize', resize_menu_lateral);
-
-    var estado_find = false
-    function ocultarFind() {
-      
-      if (estado_find) {
-        document.getElementById("find").classList.remove("find-show");
-        document.getElementById("find").classList.add("find-hidden");
-      }else{
-        document.getElementById("find").classList.remove("find-hidden");
-        document.getElementById("find").classList.add("find-show");
-
-        if(estado_menu_lateral){
-          mostrar()
-        }
-      }
-
-      estado_find = !estado_find
-    }
-    var estado_menu_lateral = false
-    var pageWidth  = document.documentElement.scrollWidth;
-
-    function resize_menu_lateral() {
-      pageWidth  = document.documentElement.scrollWidth;
-      console.log(pageWidth);
-      console.log(estado_menu_lateral);
-      if (!estado_menu_lateral) {
-        if (pageWidth < 600) {
-          document.getElementById("menu-lateral").style.left = "-41vw";
-        } else if (pageWidth < 900 ) {
-          document.getElementById("menu-lateral").style.left = "-51vw";
-        }else {
-          document.getElementById("menu-lateral").style.left = "-31vw";
-        }
-      } else {
-        document.getElementById("menu-lateral").style.left = "0";
-        if (pageWidth < 600) {
-          document.getElementById("menu-lateral").style.width = "41vw";
-        } else if (pageWidth < 900 ) {
-          document.getElementById("menu-lateral").style.width = "51vw";
-        }else {
-          document.getElementById("menu-lateral").style.width = "31vw";
-        }
-      }
-    }
-    function mostrar() {
-      pageWidth  = document.documentElement.scrollWidth;
-      if (estado_menu_lateral) {
-        document.getElementById("line-menu-icon").classList.remove("rotate");
-        document.getElementById("line-menu-icon").classList.add("a-rotate");
-
-        document.getElementById("line-menu-icon-2").classList.remove("rotate-2");
-        document.getElementById("line-menu-icon-2").classList.add("a-rotate-2");
-        
-        if (pageWidth < 600) {
-          document.getElementById("menu-lateral").style.left = "-41vw";
-        } else if (pageWidth < 900 ) {
-          document.getElementById("menu-lateral").style.left = "-51vw";
-        }else {
-          document.getElementById("menu-lateral").style.left = "-31vw";
-        }
-        console.log(pageWidth);
-      } else {
-        if (estado_find){
-          ocultarFind();
-        }
-        document.getElementById("line-menu-icon").classList.remove("a-rotate");
-        document.getElementById("line-menu-icon").classList.add("rotate");
-
-        document.getElementById("line-menu-icon-2").classList.remove("a-rotate-2");
-        document.getElementById("line-menu-icon-2").classList.add("rotate-2");
-
-        document.getElementById("menu-lateral").style.left = "0";
-        if (pageWidth < 600) {
-          document.getElementById("menu-lateral").style.width = "41vw";
-        } else if (pageWidth < 900 ) {
-          document.getElementById("menu-lateral").style.width = "51vw";
-        }else {
-          document.getElementById("menu-lateral").style.width = "31vw";
-        }
-      }
-      estado_menu_lateral = !estado_menu_lateral
-    }
-    
-    </script>
+    <script src="{% static "scripts/base.js" %}"></script>
   </body>
 </html>
