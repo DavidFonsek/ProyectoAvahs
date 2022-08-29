@@ -79,17 +79,17 @@ function actualizar_top_header() {
     switch (top_header_seleccionado) {
         case 1:
             div1.style.top = "-50px";
-            div2.style.top = "1%";
+            div2.style.top = "1vh";
             top_header_seleccionado++;
             break;
         case 2:
             div2.style.top = "-50px";
-            div3.style.top = "1%";        
+            div3.style.top = "1vh";        
             top_header_seleccionado++;
             break;
         case 3:
             div3.style.top = "-50px";
-            div1.style.top = "1%";
+            div1.style.top = "1vh";
             top_header_seleccionado=1;
             break;
     }
