@@ -1,0 +1,46 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block titulo %} Avahs {% endblock%} 
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/registro.css' %}" />
+{% endblock %} 
+
+{% block body %}
+<div class="signupFrm">
+    <form action="" class="form">
+      <h1 class="title">Registro</h1>
+
+      <div class="inputContainer">
+        <input type="text" class="input" placeholder="a">
+        <label for="" class="label">Correo</label>
+      </div>
+
+      <div class="inputContainer">
+        <input type="text" class="input" placeholder="a">
+        <label for="" class="label">Nombre de Usuario</label>
+      </div>
+
+      <div class="inputContainer">
+        <input type="password" class="input" placeholder="a">
+        <label for="psw" class="label">Contraseña</label>
+      </div>
+
+      <div class="inputContainer">
+        <input type="password" class="input" placeholder="a">
+        <label for="pwd" class="label">Confirmar Contraseña</label>
+      </div>
+
+      <input type="submit" class="submitBtn" value="Registrarse">
+      <div class="login">
+        <h4 >ya estas registrado?<a href="/app/login">   Inicia Sesion</a></h4>
+      </div>
+    </form>
+  </div>
+
+</div>
+<script>
+
+</script>
+{% endblock %}

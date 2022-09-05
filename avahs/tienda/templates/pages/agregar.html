@@ -1,0 +1,21 @@
+{% extends "base.html" %} 
+
+{%block contenido%}
+
+<div>
+    <div>
+        <div>
+            <form action="" method="post">
+                {% csrf_token%}
+                {{form}}
+                <div>
+                    <input type="reset" value="cancelar" class="btn-secundary">
+                    <input type="submit" value="Guardar" class="btn-primary">
+    
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
+{%endblock%}

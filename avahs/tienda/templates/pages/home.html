@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %} Avahs {% endblock %}
+
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+{% endblock %} 
+{% block body %} 
+
+<div class="container">
+    <section class="nuevo">
+        <h2>Novedades</h2>
+        <div class="linea"></div>
+        <div class="content">
+
+          {% for p in productos%}
+            <div class="card">
+              {%if p.imagen%}
+                <img src="{{p.imagen.url}}" alt="">
+            {%endif%}
+                <div class="info">
+                  <p class="name">{{p.nombre}}</p>
+                  <p class="precio">${{p.precio}}</p>
+                  <p class="detalle">{{p.descripcion}}</p>
+                </div>
+              </div>
+
+        </div>
+        {% endfor%}
+    
+      </section>
+    <section class="descuentos">
+        <h2>Descuentos</h2>
+        <div class="linea"></div>
+        <div class="content">
+
+           {% for p in productos%}
+            <div class="card">
+              {%if p.imagen%}
+                <img src="{{p.imagen.url}}" alt="">
+            {%endif%}
+                <div class="info">
+                  <p class="name">{{p.nombre}}</p>
+                  <p class="precio">${{p.precio}}</p>
+                  <p class="detalle">{{p.descripcion}}</p>
+                </div>
+              </div>
+
+        </div>
+        {% endfor%}
+    </section>
+{% comment %}     <section class="tendencias">
+        <h2>Tendencias</h2>
+        <div class="linea"></div>
+        <div class="content">
+
+
+            <div class="card">
+                <img src="{% static "images/products/lampara1.jpg.webp" %}" alt="">
+                <div class="info">
+                  <p class="name">sobremesa estudio blanco</p>
+                  <p class="precio">$52.000</p>
+                  <p class="detalle">Agotado</p>
+                </div>
+              </div>
+              
+
+        </div>
+    </section>
+</div>
+ {% endcomment %}
+{% endblock %}
