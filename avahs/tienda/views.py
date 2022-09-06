@@ -1,17 +1,25 @@
 from django.shortcuts import render
 
+from .models import Producto
+
 
 def home(request):
     return render(request, "pages/home.html")
 
 def novedades(request):
-    return render(request, "pages/novedades.html")
+    return render(request, "pages/secciones/novedades.html")
 
 def descuentos(request):
-    return render(request, "pages/descuentos.html")
+    productos = Producto.objects.all()
+    cant_items = len(productos)
+    data = {
+        'lista_productos': productos,
+        'items': cant_items
+    } 
+    return render(request, "pages/secciones/descuentos.html", data)
 
 def tendencias(request):
-    return render(request, "pages/tendencias.html")
+    return render(request, "pages/secciones/tendencias.html")
 
 def elemento(request):
     return render(request, "pages/elemento.html")

@@ -1,0 +1,31 @@
+{% extends "base-secciones.html" %} 
+
+
+{% load static %} 
+
+{% block titulo %} Descuentos {% endblock%} 
+
+{% block categoria %} Descuentos {% endblock %}
+
+{% block categoria-texto %}No te pierdas ninguno de nuestros descuentos{% endblock %}
+
+{% block articulos-encontrado %} {% endblock %} 
+
+{% block productos %}
+  {% for p in lista_productos%}
+    <div class="card">
+      
+      {%if p.imagen %}
+        <img src="{{ p.imagen.url }}" alt="">
+      {%endif%}
+      <div class="info">
+        <p class="name">{{p.nombre}}</p>
+        <p class="precio">${{p.precio}}</p>
+        <p class="detalle">{{p.descripcion}}</p>
+      </div>
+    </div>
+
+{% endfor%}
+
+
+{% endblock %}
