@@ -8,17 +8,35 @@
 {% endblock %} 
 
 {% block body %}
-
+<main>
   <div class="main-header">
     <div class="content">
-        <span>Resultados</span>
+        <span class="resultados-title">Resultados</span>
     </div>
   </div>
   <div class="container">
     <div class="content">
+      <div class="clothescontainer">
+        {{ productos }}
+      </div>
+      <!-- {% for p in productos%}
+      <a href="/app/producto/{{ p.nombre }}">
+        <div class="card">
+          
+          {%if p.imagen %}
+            <img src="{{ p.imagen.url }}" alt="">
+          {%endif%}
+          <div class="info">
+            <p class="name">{{p.nombre}}</p>
+            <p class="precio">${{p.precio}}</p>
+          </div>
+        </div>
+      </a>
+    {% endfor%}
         <span>No se encontraron productos que concuerden con la selección.</span>
-    </di>
+    </di> -->
   </div>
+</main>
   
 
 {% endblock %}

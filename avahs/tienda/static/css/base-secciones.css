@@ -100,7 +100,13 @@
 .card .precio{
     margin: 4px 0px;
     font-size: 14rem;
-    font-size: 800;
+}
+
+.card .precio-anterior{
+    text-decoration: line-through;
+    margin: 4px 0px;
+    font-size: 14rem;
+  
 }
 
 .card .detalle{
