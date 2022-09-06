@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.views.generic import DetailView
 from .models import Producto
 
 
@@ -21,8 +21,7 @@ def descuentos(request):
 def tendencias(request):
     return render(request, "pages/secciones/tendencias.html")
 
-def elemento(request):
-    return render(request, "pages/elemento.html")
+
 
 def resultados(request):
     return render(request, "pages/resultados.html")
@@ -33,6 +32,18 @@ def login(request):
 def registro(request):
     return render(request, "pages/registro.html")
 
-def carrito(request):
-    return render(request, "pages/carrito.html")
 
+def producto(request, nombre_p):
+    producto = Producto.objects.get(nombre=nombre_p)
+    data = {
+        'producto': producto,
+    } 
+    return  render(request, "pages/producto.html", data)
+
+
+def carrito(request, nombre_p):
+    producto = Producto.objects.get(nombre=nombre_p)
+    data = {
+        'producto': producto,
+    } 
+    return  render(request, "pages/carrito.html", data)
