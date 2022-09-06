@@ -1,4 +1,5 @@
 
+from atexit import register
 from django.urls import path
 from . import views
 
@@ -8,8 +9,10 @@ urlpatterns = [
     path("novedades", views.novedades),
     path("descuentos", views.descuentos),
     path("tendencias", views.tendencias),
-    path("novedades/elemento", views.elemento),
+    path("producto/<nombre_p>", views.producto),
     path("resultados", views.resultados),
-    path("carrito", views.carrito),
+    path("login", views.login),
+    path("registro", views.registro),
+    path("carrito/<nombre_p>", views.carrito),
 ]
 

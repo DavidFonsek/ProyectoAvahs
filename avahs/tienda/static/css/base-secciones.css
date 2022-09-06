@@ -1,5 +1,4 @@
 
-
 .main-header{
     margin: 56px 0px;
     display: flex;
@@ -8,10 +7,15 @@
     justify-content: center;
 }
 
-h2{
+.main-header h2{
     margin: 0;
-    font-size: 100px;
+    font-size: 34rem;
     text-transform: uppercase;
+}
+
+.main-header span{
+    margin: 16px 0px;
+    font-size: 16rem;
 }
 
 .container{
@@ -50,29 +54,59 @@ h2{
   }
 
 
-.card{
-    width: 21%;
-}
-.card img{
-    max-width: 100%;
-}
-
 .info{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin-top: 8px;
 }
 
 .clothescontainer{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, auto);
-    row-gap: 85px;
-    column-gap: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 32px 0px;
+  gap: 8px;
+  flex-wrap: wrap;
 }
-.products img{
+
+
+.clothescontainer a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+  
+
+.card{
+    width: 240px;
+    border-radius: 8px;
+    border:  0.1px solid rgb(206, 212, 218);
+    overflow: hidden;
+    gap: 2% 4%;
+}
+.card img{
     width: 100%;
-    height: 100%; 
-    
 }
+
+
+.clothescontainer a .name{
+    margin: 12px 0px;
+    text-transform: uppercase;
+    font-size: 14rem;
+    font-weight: 400;
+}
+
+
+.card .precio{
+    margin: 4px 0px;
+    font-size: 14rem;
+    font-size: 800;
+}
+
+.card .detalle{
+    margin: 6px 0px;
+    font-size: 16px;
+    color: #b04f53;
+    font-weight: bold;
+}
+
